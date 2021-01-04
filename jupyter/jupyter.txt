@@ -1,0 +1,12 @@
+# this is the setting of jupyter-theme 
+jt -t grade3 -f firacode -fs 95 -tfs 11 -nfs 115 -cellw 88% -T -N
+
+# cd /Users/jemmy/.jupyter/custom/custom.css
+
+.prompt.out_prompt_overlay:not(:hover):not(:focus-within):not(:active) {
+font-size: 0pt !important;
+}
+
+.prompt.input_prompt:not(:hover):not(:focus-within):not(:active) {
+font-size: 0pt !important;
+}
