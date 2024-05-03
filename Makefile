@@ -1,7 +1,7 @@
 .PHONY: link-nvim
 
 CONFIG_DIR = $(HOME)/.config/nvim
-DOTFILES_DIR = $(PWD)
+DOTFILES_DIR = $(PWD)/nvim
 
 link-nvim:
 	@echo "Linking nvim configuration..."
