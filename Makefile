@@ -15,7 +15,7 @@ link-nvim:
 link-aliases:
 	@echo "Linking nvim aliases..."
 	@rm -rf $(HOME)/.bash_aliases
-	@ln -s $(DOTFILES_DIR)/aliases/.bash_aliases $(CONFIG_DIR)/.bash_aliases
+	@ln -s $(DOTFILES_DIR)/aliases/.bash_aliases $(HOME)/.bash_aliases
 	@echo "Nvim aliases are linked."
 
 
