@@ -20,7 +20,8 @@ return {
 			require("mason-lspconfig").setup({
 				ensure_installed = {
 					"lua_ls",
-					"pylsp",
+					"pyright",
+					"ruff"
 				},
 				automatic_installation = true,
 			})
@@ -61,6 +62,11 @@ return {
 			}
 			vim.diagnostic.config(config)
 
+			-- toggle diagnostics floating window
+			vim.o.updatetime = 250
+			vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
+
+
 			-- This function gets run when an LSP connects to a particular buffer.
 			local on_attach = function(client, bufnr)
 				local lsp_map = require("helpers.keys").lsp_map
@@ -81,7 +87,7 @@ return {
 					vim.lsp.buf.format()
 				end, { desc = "Format current buffer with LSP" })
 
-				lsp_map("<leader>ff", "<cmd>Format<cr>", bufnr, "Format")
+				lsp_map("<leader>fm", "<cmd>Format<cr>", bufnr, "Format")
 
 				-- Attach and configure vim-illuminate
 				require("illuminate").on_attach(client)
@@ -114,33 +120,10 @@ return {
 			})
 
 			-- Python
-			require("lspconfig")["pylsp"].setup({
+			require("lspconfig")["pyright"].setup({
 				on_attach = on_attach,
 				capabilities = capabilities,
-				settings = {
-					pylsp = {
-						plugins = {
-							flake8 = {
-								enabled = true,
-								maxLineLength = 100, -- Black's line length
-							},
-							-- Disable plugins overlapping with flake8
-							pycodestyle = {
-								enabled = false,
-							},
-							mccabe = {
-								enabled = false,
-							},
-							pyflakes = {
-								enabled = false,
-							},
-							-- Use Black as the formatter
-							autopep8 = {
-								enabled = false,
-							},
-						},
-					},
-				},
+				filetypes = { "python" },
 			})
 		end,
 	},
