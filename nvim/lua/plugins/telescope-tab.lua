@@ -9,7 +9,7 @@ return {
             }
             -- custom keybindings
             local map = require("helpers.keys").map
-            map("n", "<leader><TAB>", "<cmd> Telescope telescope-tabs list_tabs<cr>", "Toggle tab panel")
+            map("n", "<leader><TAB>", "<cmd> Telescope telescope-tabs list_tabs<cr><esc>", "Toggle tab panel")
         end,
     },
 }
