@@ -1,4 +1,4 @@
-CONFIG_DIR = $(HOME)/.config/
+CONFIG_DIR = $(HOME)/.config
 DOTFILES_DIR = $(PWD)
 
 
@@ -9,9 +9,9 @@ install: link-nvim link-aliases link-gitconfig ## Link all configurations
 .PHONY: link-nvim
 link-nvim:
 	@echo "Linking nvim configuration..."
-	@mkdir -p $(CONFIG_DIR)/nvim
-	@rm -rf $(CONFIG_DIR)/nvim
-	@ln -s $(DOTFILES_DIR)/nvim $(CONFIG_DIR)/nvim
+	mkdir -p $(CONFIG_DIR)/nvim
+	rm -rf $(CONFIG_DIR)/nvim
+	ln -s $(DOTFILES_DIR)/nvim $(CONFIG_DIR)/nvim
 	@echo "Nvim is linked."
 
 
