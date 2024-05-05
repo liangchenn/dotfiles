@@ -27,4 +27,11 @@ map("n", "<leader>da", buffers.delete_all, "Delete All buffers")
 
 -- quit
 map("n", "<leader>qq", "<cmd>q<cr>", "quit current window")
+map("n", "<leader>QQ", "<cmd>q!<cr>", "quit current window")
 
+-- window
+map("n", "<leader>w", "<c-w>", "Window command starter")
+
+-- tabs
+map("n", "<tab>a", "<cmd>tabnew<cr>", "Create new tab")
+map("n", "<c-D>", "<cmd>close<cr>", "Close tab")
