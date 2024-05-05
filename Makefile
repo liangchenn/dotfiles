@@ -2,6 +2,10 @@ CONFIG_DIR = $(HOME)/.config/
 DOTFILES_DIR = $(PWD)
 
 
+.PHONY: install
+install: link-nvim link-aliases link-gitconfig ## Link all configurations
+
+
 .PHONY: link-nvim
 link-nvim:
 	@echo "Linking nvim configuration..."
@@ -13,10 +17,10 @@ link-nvim:
 
 .PHONY: link-aliases
 link-aliases:
-	@echo "Linking nvim aliases..."
+	@echo "Linking aliases..."
 	@rm -rf $(HOME)/.bash_aliases
 	@ln -s $(DOTFILES_DIR)/aliases/.bash_aliases $(HOME)/.bash_aliases
-	@echo "Nvim aliases are linked."
+	@echo "Aliases are linked."
 
 
 .PHONY: link-gitconfig
