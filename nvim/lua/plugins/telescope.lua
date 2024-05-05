@@ -17,6 +17,7 @@ return {
 							["<C-d>"] = false,
 						},
 					},
+					initial_mode = 'normal'
 				},
 			})
 
