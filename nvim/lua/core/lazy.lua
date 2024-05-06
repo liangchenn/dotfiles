@@ -28,4 +28,4 @@ require("helpers.keys").set_leader(" ")
 lazy.setup("plugins")
 
 -- easy access to LazyNvim
-require("helpers.keys").map("n", "<leader>L", lazy.show, "Show Lazy")
+require("helpers.keys").map("n", "<leader>l", lazy.show, "Show Lazy")

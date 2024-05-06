@@ -19,4 +19,4 @@ for opt, val in pairs(opts) do
 end
 
 -- Set other options
-vim.cmd.colorscheme("tokyonight-storm")
+vim.cmd.colorscheme("onedark")

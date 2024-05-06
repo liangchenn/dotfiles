@@ -9,7 +9,17 @@ return {
 			"MunifTanjim/nui.nvim",
 		},
 		config = function()
-			require("neo-tree").setup()
+			require("neo-tree").setup({
+				-- custom set to global cwd
+				filesystem = {
+					bind_to_cwd = true,
+					hijack_netrw_behavior = 'open_current',
+					cwd_target = {
+						sidebar = "tab",
+						current = "window"
+					}
+				}
+			})
 			require("helpers.keys").map(
 				{ "n", "v" },
 				"<leader>e",
