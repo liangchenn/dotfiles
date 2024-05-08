@@ -3,7 +3,7 @@ return {
         'akinsho/toggleterm.nvim', version = "*",
         config = function()
             require("toggleterm").setup({
-                open_mapping = [[<leader>\]],
+                open_mapping = [[<C-\>]],
                 size = 20,
                 direction = 'float',
                 close_on_exit = true,
@@ -18,6 +18,8 @@ return {
                     },
                   },
             })
+            -- custom keymap
+            require("helpers.keys").map("n", "<leader>\\", "<cmd>ToggleTerm<cr>", "Toggle Terminal")
         end,
     }
 }
