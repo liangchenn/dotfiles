@@ -8,8 +8,8 @@ return {
 			options = {
 				icons_enabled = true,
 				theme = lualine_theme,
-				component_separators = "|",
-				section_separators = "",
+				component_separators = { left = '', right = ''},
+				section_separators = { left = '', right = '' },
 			},
 		})
 	end,

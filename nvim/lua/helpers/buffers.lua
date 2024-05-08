@@ -22,4 +22,13 @@ else
 	M.delete_others = noop
 end
 
+M.toggleTabline = function()
+	local current = vim.opt.showtabline:get()
+	if current > 0 then
+		vim.o.showtabline = 0
+	else
+		vim.o.showtabline = 2
+	end
+end
+
 return M

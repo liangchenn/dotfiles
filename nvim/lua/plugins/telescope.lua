@@ -17,7 +17,12 @@ return {
 							["<C-d>"] = false,
 						},
 					},
-					initial_mode = 'normal'
+					initial_mode = 'normal',
+                    picker =  {
+                        colorscheme = {
+                            enable_preview = true
+                        }
+                    }
 				},
 			})
 

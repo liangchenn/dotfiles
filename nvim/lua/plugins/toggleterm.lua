@@ -8,6 +8,15 @@ return {
                 direction = 'float',
                 close_on_exit = true,
                 shade_terminals = true,
+                autochdir = true,
+                highlights = {
+                    NormalFloat = {
+                      link = "Normal",
+                    },
+                    FloatBorder = {
+                      link = "FloatBorder",
+                    },
+                  },
             })
         end,
     }
