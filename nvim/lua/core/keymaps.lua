@@ -38,6 +38,8 @@ map("n", "<tab>a", "<cmd>tabnew<cr>", "Create new tab")
 map("n", "<c-D>", "<cmd>close<cr>", "Close tab")
 
 -- buffers
-
 map("n", "<tab>b", buffers.toggleTabline, "Toggle buffer/tabline")
 map("n", "<leader>ob", buffers.toggleTabline, "Toggle buffer/tabline")
+
+-- projects
+map("n", "<leader>P", "<cmd>Telescope projects<cr>", "Projects Panel")

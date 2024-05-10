@@ -12,8 +12,12 @@ return {
                     "catppuccin-frappe",
                     "catppuccin-macchiato",
                     "catppuccin-mocha",
+                    "dracula",
+                    "dracula-soft",
+                    "rose-pine",
+                    "rose-pine-moon",
                 },
-                themeConfigFile = "~/.config/nvim/lua/plugins/themes.lua", -- Described below
+                themeConfigFile = "~/.local/share/nvim/themes.lua", -- Described below
                 livePreview = true, -- Apply theme while browsing. Default to true.
             })
             -- custom keymaps
